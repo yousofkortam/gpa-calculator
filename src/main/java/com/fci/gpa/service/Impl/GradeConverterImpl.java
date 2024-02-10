@@ -7,14 +7,11 @@ import org.springframework.stereotype.Service;
 public class GradeConverterImpl implements GradeConverter {
     @Override
     public String getGrade(double gpa) {
-        if (gpa < 2) return "F";
-        if (gpa < 2.2) return "D";
-        if (gpa < 2.4) return "D+";
-        if (gpa < 2.7) return "C";
-        if (gpa < 3) return "C+";
-        if (gpa < 3.3) return "B";
-        if (gpa < 3.7) return "B+";
-        if (gpa < 4) return "A";
-        return "A+";
+        if (gpa < 1.5) return "ضعيف جدا";
+        if (gpa < 2) return "ضعيف";
+        if (gpa < 2.5) return "مقبول";
+        if (gpa < 3) return "جيد";
+        if (gpa < 3.5) return "جيد جدا";
+        return "ممتاز";
     }
 }
